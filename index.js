@@ -8,7 +8,7 @@ dotenv.config();
 //simple proxy using request library, could be axios also, but this is faster
 app.all('*', (req, res) => {
   console.log(
-    `[${new Date().toDateString()}] PROXY ${req.method} ${
+    `[${new Date().toISOString()}] PROXY ${req.method} ${
       process.env.PROXY_URL + req.url
     }`
   );
